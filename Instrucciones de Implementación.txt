@@ -1,0 +1,22 @@
+Instrucciones de Implementación
+
+1. Crear estructura de directorios:
+
+bashmkdir -p tests config results figuras
+
+2. Implementar los archivos proporcionados en sus ubicaciones correspondientes
+3. Ejecutar tests:
+
+bashpython -m pytest tests/ -v
+
+4. Construir Docker:
+
+bashdocker-compose build
+
+5. Ejecutar experimentos completos:
+
+bashdocker-compose up nos-experiment
+
+6. Generar figuras IEEE:
+
+bashpython generate_figures.py

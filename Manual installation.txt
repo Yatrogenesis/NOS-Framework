@@ -1,0 +1,15 @@
+# Clone repository
+git clone https://github.com/fmolina-research/nos-framework
+cd nos-framework
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+python -m pytest tests/ -v
+
+# Run complete experiment suite
+python run_nos.py
+
+# Run quick test
+python run_nos.py --quick

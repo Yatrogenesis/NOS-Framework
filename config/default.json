@@ -1,0 +1,31 @@
+{
+  "experiments": {
+    "stability_plasticity": true,
+    "concept_emergence": true,
+    "dimensional_adaptation": true,
+    "performance_comparison": true,
+    "cross_domain": true
+  },
+  "parameters": {
+    "max_dimensions": 64,
+    "simulation_steps": 50,
+    "random_seeds": [42, 123, 456, 789, 1011],
+    "complexity_range": [0.2, 0.9],
+    "plasticity_range": [0.01, 0.5],
+    "emergence_threshold": 0.3,
+    "stability_threshold": 0.7,
+    "energy_budget": 100.0
+  },
+  "output": {
+    "save_figures": true,
+    "save_data": true,
+    "figure_format": "eps",
+    "figure_dpi": 300,
+    "results_format": "json"
+  },
+  "hardware": {
+    "use_gpu": false,
+    "max_workers": 4,
+    "memory_limit_gb": 8
+  }
+}

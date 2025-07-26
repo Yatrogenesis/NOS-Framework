@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nos-experiment:
+    build: .
+    volumes:
+      - ./results:/app/results
+      - ./config:/app/config
+    environment:
+      - PYTHONPATH=/app
+      - MPLBACKEND=Agg
+    command: python run_nos.py --config config/default.json
+    
+  nos-quick-test:
+    build: .
+    volumes:
+      - ./results:/app/results
+    command: python run_nos.py --quick --log-level DEBUG
+    
+  nos-tests:
+    build: .
+    command: python -m pytest tests/ -v --tb=short
